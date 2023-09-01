@@ -3,7 +3,11 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_clone/color.dart';
 
 class Search extends StatelessWidget {
-  const Search({super.key});
+  final double searchBarLength;
+  const Search({
+    super.key,
+    required this.searchBarLength,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +26,7 @@ class Search extends StatelessWidget {
           height: 20,
         ),
         SizedBox(
-          width: size.width * 0.4,
+          width: searchBarLength,
           child: TextField(
             decoration: InputDecoration(
               border: const OutlineInputBorder(

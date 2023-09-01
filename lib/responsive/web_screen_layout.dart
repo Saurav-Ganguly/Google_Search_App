@@ -88,24 +88,26 @@ class WebScreenLayout extends StatelessWidget {
           SizedBox(
             height: size.height * 0.25,
           ),
-          const Expanded(
+          Expanded(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Column(
                   children: [
-                    Search(),
-                    SizedBox(
+                    Search(
+                      searchBarLength: size.width * 0.4,
+                    ),
+                    const SizedBox(
                       height: 20,
                     ),
-                    SearchButtons(),
-                    SizedBox(
+                    const SearchButtons(),
+                    const SizedBox(
                       height: 20,
                     ),
-                    TranslationButtons(),
+                    const TranslationButtons(),
                   ],
                 ),
-                WebFooter(),
+                const WebFooter(),
               ],
             ),
           ),
